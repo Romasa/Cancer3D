@@ -2,7 +2,6 @@
 #include <locale.h>
 #include<chrono>
 #include <math.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
 #include <time.h>
@@ -187,7 +186,7 @@ int main()
     {
       write_conc(t);
     }
-    if(numb >= 170){
+    if(numb >= 200){
       auto end = std::chrono::high_resolution_clock::now();
       auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
       std::cout << "Runtime: " << (duration.count())/1000.0 << " seconds" << std::endl;
@@ -217,7 +216,7 @@ void initialize(gsl_rng *rng)
   // Time1 = 600 + 300*(double) rand()/RAND_MAX;
   Time1 = 720;
 
-  CC.push_back(Cell(Vect3D(0, 0, 0), CellRad, 1, Time1, 2 * Time1, 0, rng));
+  // CC.push_back(Cell(Vect3D(0, 0, 0), CellRad, 1, Time1, 2 * Time1, 0, rng));
   allgencells++;
   return;
 }
@@ -448,7 +447,6 @@ void computeDivision(int t, gsl_rng *rng)
       
 
       CC.push_back(Cell(Vect3D(c->pos.x - dpos.x, c->pos.y - dpos.y, c->pos.z - dpos.z), CellRad, 1, TimeG, 2 * TimeG, erk1, rng));
-      allgencells++;
 
       TimeG = PG1;
       TimeG += gsl_ran_gaussian_ziggurat(rng, PG1sd);

@@ -8,7 +8,7 @@ double dt = 0.02;
 const int t_num = 15*24*60/dt; 
 
 // Time to write results
-const int t_disk = 10/dt; 
+const int t_disk = 720/dt; 
 
 // Time to return timestep info
 const int t_info = 100;  
@@ -91,7 +91,7 @@ const double K2 = 0.0017293*60;
 
 
 //Drug specific parameters
-const int START_DAY = (int) (7*24*60/dt); // First day to introduce drug/treatment
+const int START_DAY = (int) (99*24*60/dt); // First day to introduce drug/treatment
 
 //For Erlotinib
 const char DRUG_NAME = 'E';
