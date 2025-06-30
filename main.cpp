@@ -216,7 +216,7 @@ void initialize(gsl_rng *rng)
   // Time1 = 600 + 300*(double) rand()/RAND_MAX;
   Time1 = 720;
 
-  // CC.push_back(Cell(Vect3D(0, 0, 0), CellRad, 1, Time1, 2 * Time1, 0, rng));
+  CC.push_back(Cell(Vect3D(0, 0, 0), CellRad, 1, Time1, 2 * Time1, 0, rng));
   allgencells++;
   return;
 }
