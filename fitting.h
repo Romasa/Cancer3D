@@ -4,11 +4,11 @@
 /************  EGF concentration parameter fitting  ************/
 
 // For EGF concentration = 0.05 ng/ml, # of molecules should be around 2463 => 25
-  const int t_egf = 2700;
+ /* const int t_egf = 2700;
   int NUM_MOLECULES = 25;
   // Number of molecules introduced every tn timestep
   int NUM_MOLECULES_R = 1;
-
+*/
 
 // For EGF concentration = 0.1 ng/ml, # of molecules should be around 4927 => 49
  /* const int t_egf = 1470;
@@ -31,11 +31,11 @@ int NUM_MOLECULES_R = 4;  // number of molecules to be introduced every t_egf ti
 */
 
 // For EGF concentration = 0.6 ng/ml, # of molecules should be around 29560 => 295
- /* const int t_egf = 1200;
+  const int t_egf = 1200;
   int NUM_MOLECULES = 295;
   // Number of molecules introduced every tn timestep
   int NUM_MOLECULES_R = 5; 
-*/
+
 
 // For EGF concentration = 0.8 ng/ml, # of molecules should be around 39414 => 394
  /* const int t_egf = 1075;

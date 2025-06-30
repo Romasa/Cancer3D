@@ -675,7 +675,7 @@ void write_particle_vtk(int time, int Type)
     numbz = numb1;
 
   stringstream output_filename;
-  output_filename << "vtk_particle/particle_t" << Type << " " << time << ".vtk";
+  output_filename << "vtk_particle/particle_t" << Type << " " << time * 1/t_disk << ".vtk";
   ofstream output_file;
 
   /// Open file
@@ -742,7 +742,7 @@ void write_particle1_vtk(int time, int Type)
   if (Type == 10)
     numbz = numb10;
   stringstream output_filename;
-  output_filename << "vtk_particle/particle1_t" << Type << " " << time << ".vtk";
+  output_filename << "vtk_particle/particle1_t" << Type << " " << time *1/t_disk << ".vtk";
   ofstream output_file;
 
   /// Open file
@@ -806,8 +806,7 @@ void write_molecule_vtk(int time, int numbMol)
 {
   int numbz = numbMol;
   stringstream output_filename;
-  output_filename << "vtk_particle/molecule_t"
-                  << " " << time << ".vtk";
+  output_filename << "vtk_particle/molecule_t"     << " " << time * 1/t_disk << ".vtk";
   ofstream output_file;
 
   /// Open file
@@ -846,8 +845,7 @@ void write_treatment_molecule_vtk(int time, int numbDrugMol)
   /// Create filename
   int numbz = numbDrugMol;
   stringstream output_filename;
-  output_filename << "vtk_particle/treatment_molecule_t"
-                  << " " << time << ".vtk";
+  output_filename << "vtk_particle/treatment_molecule_t"   << " " << time *1/t_disk << ".vtk";
   ofstream output_file;
 
   /// Open file
@@ -882,8 +880,7 @@ void write_receptor_vtk(int time, int numbRec)
 
   // int numbz = 20;
   stringstream output_filename;
-  output_filename << "vtk_particle/receptor_t"
-                  << " " << time << ".vtk";
+  output_filename << "vtk_particle/receptor_t" << " " << time*1/t_disk << ".vtk";
   ofstream output_file;
 
   /// Open file
@@ -932,7 +929,7 @@ void write_receptorbl_vtk(int time, int numbRec)
   int numbz = numbRec;
 
   stringstream output_filename;
-  output_filename << "vtk_particle/receptorbl_t" << " " << time << ".vtk";
+  output_filename << "vtk_particle/receptorbl_t" << " " << time * 1/t_disk << ".vtk";
   ofstream output_file;
 
   output_file.open(output_filename.str().c_str());
@@ -982,8 +979,7 @@ void write_receptorIn_vtk(int time, int numbRecIn)
 
   // int numbz = 20;
   stringstream output_filename;
-  output_filename << "vtk_particle/receptorIn_t"
-                  << " " << time << ".vtk";
+  output_filename << "vtk_particle/receptorIn_t"   << " " << time * 1/t_disk<< ".vtk";
   ofstream output_file;
 
   /// Open file
